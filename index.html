@@ -7,6 +7,7 @@
     <!-- css -->
     <link rel="stylesheet" href="./Css/globle.css" />
     <link rel="stylesheet" href="./Css/alertForSignUp.css" />
+    <link rel="stylesheet" href="./Css/hero.css" />
 
     <!-- font Awesome -->
     <link
@@ -31,10 +32,21 @@
 
     <!-- Navbar -->
     <nav>
-      <div class="logo">
-        <a href="#">Shop.co</a>
+      <div class="logo-burger">
+        <!-- mobile -->
+        <label class="burger" for="burger">
+          <input type="checkbox" id="burger" onchange="toggleNavbar()" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <!-- end mobile -->
+        <div class="logo">
+          <a href="#">Shop.co</a>
+        </div>
       </div>
-      <ul class="menu">
+
+      <ul class="menu" id="menu">
         <li>
           <select>
             <option value="" hidden>Shop</option>
@@ -92,8 +104,12 @@
         </form>
       </div>
       <div class="cart-sign-warpper">
+        <!-- mobile -->
+        <button onclick="toggleSearch()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <!-- end mobile -->
         <div class="cart">
-          
           <i class="fas fa-shopping-cart"></i>
           <span>0</span>
         </div>
@@ -103,5 +119,26 @@
       </div>
     </nav>
     <!-- end Navbar -->
+
+    <!-- hero section -->
+    <!-- <section class="hero">
+       <div class="container">
+         <h2>FIND CLOTHES THAT MATCHES YOUR STYLE</h2>
+         <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+         <button>Shop Now</button>
+
+         <div class="numbers">
+          <p>200++ <span>International Brands</span></p>
+          <span>|</span>
+          <p>2,000+ <span>High-Quality Products</span></p>
+          <span>|</span>
+          <p>30,000+ <span>Happy Customers</span></p>
+         </div>
+       </div>
+
+     </section> -->
+    <!-- end hero section -->
+
+    <script src="./Js/navbar.js"></script>
   </body>
 </html>
