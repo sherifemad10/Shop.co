@@ -408,6 +408,47 @@ nav {
 }
 
 @media (max-width: 541px) {
+  nav{
+    top: 3.5rem;
+    /* padding: 4rem 0; */
+
+    .burger{
+      width: 30px;
+      height: 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    left: 0;
+    gap: 1rem;
+
+    .burger{
+      width: 30px;
+      height: 20px;
+    }
+  }
+
+}
+
+@media (max-width: 344px) {
+  nav {
+    left: 0;
+
+    .logo-burger{
+      gap: 1rem;
+    }
+
+    .burger{
+      width: 30px;
+      height: 20px;
+    }
+  
+}
+}
+
+@media (max-width: 541px) {
   nav {
     top: 3.5rem;
     /* padding: 4rem 0; */
