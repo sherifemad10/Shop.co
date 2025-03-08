@@ -81,7 +81,8 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    max-width: 1400px;
+    /* max-width: 1400px; */
+    width: 100%;
     margin-left: 0px auto;
     padding: 2rem 6rem;
   }
