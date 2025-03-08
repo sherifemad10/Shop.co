@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "T-shirt with Tape Details",
+    "description": "Description 1",
+    "rate": 4.5,
+    "price": 120,
+    "oldPrice": null,
+    "discount": null,
+    "newArrivals": true,
+    "images": [
+      {
+        "id": 1,
+        "url": "./Images/T-shirt.png"
+      },
+      {
+        "id": 2,
+        "url": "./Images/T-shirt.png"
+      },
+      {
+        "id": 3,
+        "url": "./Images/T-shirt.png"
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "name": "Skinny Fit Jeans",
+    "description": "Description 2",
+    "rate": 4.5,
+    "price": 240,
+    "oldPrice": 260,
+    "discount": 20,
+    "newArrivals": true,
+
+    "images": [
+      {
+        "id": 1,
+        "url": "./Images/traser.png"
+      },
+      {
+        "id": 2,
+        "url": "./Images/traser.png"
+      },
+      {
+        "id": 3,
+        "url": "./Images/traser.png"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Checkered Shirt",
+    "description": "Description 2",
+    "rate": 3,
+    "price": 180,
+    "oldPrice": null,
+    "discount": null,
+    "newArrivals": true,
+
+    "images": [
+      {
+        "id": 1,
+        "url": "./Images/Checkered.png"
+      },
+      {
+        "id": 2,
+        "url": "./Images/Checkered.png"
+      },
+      {
+        "id": 3,
+        "url": "./Images/Checkered.png"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sleeve Striped T-shirt",
+    "description": "Description 2",
+    "rate": 5,
+    "price": 130,
+    "oldPrice": 160,
+    "discount": 30,
+    "newArrivals": true,
+
+    "images": [
+      {
+        "id": 1,
+        "url": "./Images/Sleeve.png"
+      },
+      {
+        "id": 2,
+        "url": "./Images/Sleeve.png"
+      },
+      {
+        "id": 3,
+        "url": "./Images/Sleeve.png"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Vertical Striped Shirt",
+    "description": "Description 2",
+    "rate": 5,
+    "price": 212,
+    "oldPrice": 232,
+    "discount": 20,
+    "topSelling": true,
+
+    "images": [
+      {
+        "id": 1,
+        "url": "./Images/Vertical.png"
+      },
+      {
+        "id": 2,
+        "url": "./Images/Vertical.png"
+      },
+      {
+        "id": 3,
+        "url": "./Images/Vertical.png"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Courage Graphic T-shirt",
+    "description": "Description 2",
+    "rate": 4,
+    "price": 145,
+    "oldPrice": null,
+    "discount": null,
+    "topSelling": true,
+
+    "images": [
+      {
+        "id": 1,
+        "url": "./Images/Courage.png"
+      },
+      {
+        "id": 2,
+        "url": "./Images/Courage.png"
+      },
+      {
+        "id": 3,
+        "url": "./Images/Courage.png"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Loose Fit Bermuda Shorts",
+    "description": "Description 2",
+    "rate": 3,
+    "price": 80,
+    "oldPrice": null,
+    "discount": null,
+    "topSelling": true,
+
+    "images": [
+      {
+        "id": 1,
+        "url": "./Images/Loose.png"
+      },
+      {
+        "id": 2,
+        "url": "./Images/Loose.png"
+      },
+      {
+        "id": 3,
+        "url": "./Images/Loose.png"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Faded Skinny Jeans",
+    "description": "Description 2",
+    "rate": 4.5,
+    "price": 80,
+    "oldPrice": null,
+    "discount": null,
+    "topSelling": true,
+
+    "images": [
+      {
+        "id": 1,
+        "url": "./Images/Faded.png"
+      },
+      {
+        "id": 2,
+        "url": "./Images/Faded.png"
+      },
+      {
+        "id": 3,
+        "url": "./Images/Faded.png"
+      }
+    ]
+  }
+]
