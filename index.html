@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./Css/globle.css" />
     <link rel="stylesheet" href="./Css/alertForSignUp.css" />
     <link rel="stylesheet" href="./Css/hero.css" />
-    <link rel="stylesheet" href="./Css/DressStyle.css" />
     <link rel="stylesheet" href="./Css/Prodects.css" />
     <link rel="stylesheet" href="./Css/offers.css" />
     <link rel="stylesheet" href="./Css/footer.css" />
+    <link rel="stylesheet" href="./Css/review.css" />
 
     <!-- font Awesome -->
     <link
@@ -175,6 +175,7 @@
           src="Images/versace-seeklogo.png"
           width="200px"
           alt="versace-brand"
+          loading="lazy"
         />
       </div>
       <div class="item-brand">
@@ -189,7 +190,7 @@
           width="175px"
           alt="prada-brand"
           loading="lazy"
-        />
+          />
       </div>
    
       </div>
@@ -229,30 +230,26 @@
     </section>
     <!-- end top selling -->
 
-    <!-- Dress Style section -->
-    <section class="dress-style-section">
-      <h2 class="title-style">BROWSE BY DRESS STYLE</h2>
+    
+    <!-- review -->
 
-      <div class="style-grid">
-        <div class="style-card small-card">
-          <h3>Casual</h3>
-          <img src="Images/casual.png" alt="casual" />
-        </div>
-        <div class="style-card large-card">
-          <h3>Formal</h3>
-          <img src="Images/formal.png" alt="formal" />
-        </div>
-        <div class="style-card large-card">
-          <h3>Party</h3>
-          <img src="Images/gym.png" alt="party" />
-        </div>
-        <div class="style-card small-card">
-          <h3>Gym</h3>
-          <img src="Images/party-1.png" alt="gym" />
+    <section class="testimonial-container">
+      <div class="testimonial-header">
+        <h2 class="testimonial-title">Our Happy Customers</h2>
+        <div class="testimonial-nav">
+          <button class="nav-btn prev-btn" aria-label="Previous testimonial">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button class="nav-btn next-btn" aria-label="Next testimonial">
+            <i class="fas fa-arrow-right"></i>
+          </button>
         </div>
       </div>
+
+      <section class="testimonial-slider" id="testimonialSlider"></section>
     </section>
-    <!-- End Dress Style  -->
+
+    <!-- end review -->
 
     <!-- start offers-section -->
     <section class="offers-section">
@@ -338,5 +335,7 @@
 
     <script src="./Js/navbar.js"></script>
     <script src="./Js/homeProdect.js"></script>
+    <script src="./Js/review.js"></script>
+
   </body>
 </html>

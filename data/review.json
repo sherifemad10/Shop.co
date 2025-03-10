@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah M.",
+    "review": "I'm blown away by the quality and style of the clothes I received from Stylux. From elegant party wear to cozy casual pieces, everything far has exceeded my expectations.",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Alex K.",
+    "review": "Finding clothes that align with my personal style used to be a challenge until I discovered this shop. Their collection is simply remarkable, catering to a variety of taste and preferences.",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "Maya L.",
+    "review": "As someone who's always on the lookout for unique fashion pieces, I'm thrilled I found this shop. The attention to detail in their clothes is not only divine but also on-point with the latest trends.",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "name": "James R.",
+    "review": "The customer service is impeccable, and the quality of their products exceeds all expectations. Delivery was faster than promised, and everything fit perfectly.",
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "name": "Emma H.",
+    "review": "I'm a sucker for the elegance and comfort of clothing. This shop has everything I love about it: their design, the attention to detail, and the honesty of their business. I highly recommend this place to anyone looking for a place to buy quality clothes.",
+    "rating": 5
+  },
+  {
+    "id": 6,
+    "name": "Olivia J.",
+    "review": "I'm a big fan of classic clothing, and this shop has a lot to offer. The clothes are stunning, and I couldn't be happier with the way they fit and looked. I highly recommend this place to anyone looking for a place to buy classic clothes.",
+    "rating": 5
+  },
+  {
+    "id": 7,
+    "name": "David A.",
+    "review": "Stylux has a unique and stylish aesthetic that I love. The clothes are beautiful and well-made, and I couldn't be happier with the way they fit and looked. I highly recommend this place to anyone looking for a place to buy stylish clothes.",
+    "rating": 5
+  }
+]
