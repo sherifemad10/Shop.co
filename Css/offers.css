@@ -1,23 +1,27 @@
 .offers-section {
     position: absolute;
     display: flex;
-    margin: 40px auto;
-    max-width: 900px;
+    justify-content: center;
+    align-items: center;
+    /* margin: 40px auto; */
+    max-width: 800px;
     max-height: 50vh;
-    padding: 3rem 2rem;
+    padding: 8rem 50rem;
     background-color: black;
     color: #fff;
     border-radius: 20px;
-    top: 2720px;
-    left: 250px;
+    top: 535%;
+    right: 15%;
 }
 
 
 .flex-box {
-    
+    position: absolute;
     display: flex;
     flex-direction: row;
     gap: 20rem;
+    top: 20%;
+    left: 8%;
 
 }
 
@@ -37,10 +41,6 @@ flex-grow: 0;
 
 }
 
-
-
-
-
 .flex-box-two-column input[type="email"] {
     padding: 0.8rem 1.5rem;
     border: 2px solid #ddd;
@@ -54,8 +54,8 @@ flex-grow: 0;
 
 .fa-envelope {
     position: absolute;
-    left: 585px;
-    top: 45px;
+    right: 31.5%;
+    top: 13%;
     font-size: 1.8rem;
     color: #666;
 }
@@ -92,106 +92,92 @@ transform: translateY(-5px);
 }
 
 
+
 @media (max-width: 1024px) {
     .offers-section {
-        max-width: 1000px;
-        left: 50%;
+        max-width: 800px;
         transform: translateX(-50%);
-        padding: 2rem 1.5rem;
-        top: 3580px;
+        padding: 8rem 42rem;
+        top: 960%;
+        left: 50%;
     
     }
+   
 
     .flex-box {
-        gap: 10rem; 
-    }
-
-    .flex-box-two-column input[type="email"] {
-        width: 250px; 
-    }
-
-    .subscribe {
-        padding: 0.8rem 7rem; 
-    }
-
-    .fa-envelope {
-        left: 480px;
-        top: 40px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .offers-section {
-        max-width: 90%; 
-        max-height: 40vh;
-        padding: 1.5rem 1rem;
-        top: 2400px; 
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .flex-box {
-        flex-direction: column; 
-        gap: 2rem; 
-        align-items: center;
+        gap: 14rem;
     }
 
     .offers-section h2 {
-        font-size: 24px; 
-        line-height: 32px;
-        text-align: center;
+        font-size: 26px;
+        line-height: 38px;
     }
-
-    .flex-box-two-column input[type="email"] {
-        width: 100%; 
-        max-width: 300px;
-    }
-
-    .subscribe {
-        padding: 0.8rem 0; 
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .fa-envelope {
-        left: auto; 
-        right: 20px;
-        top: 38px;
-        font-size: 1.5rem;
+    .fa-envelope{
+        top: 20%;
+        left: 61.5%;
     }
 }
 
+@media (max-width: 768px) {
+    .offers-section {
+        max-width: 600px;
+        transform: translateX(-50%);
+        padding: 6rem 35rem;
+        top: 1185%;
+        left: 50%;
+        margin-top: 100px;
+    
+    }
+    .flex-box {
+        flex-direction: row;
+        text-align: center;
+        gap: 6rem;
+    }
+
+    .offers-section h2 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    
+    .flex-box-two-column {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .fa-envelope{
+        top: 19%;
+        left: 41.5%;
+    }
+}
 
 @media (max-width: 480px) {
     .offers-section {
-        max-width: 90%;
-        max-height: 35vh;
-        padding: 1rem 0.5rem;
-        top: 2200px; 
+        max-width: 400px;
+        transform: translateX(-50%);
+        padding: 14rem 20rem;
+        top: 1400%;
+        left: 50%;
+        margin-top: 300px;
     }
 
+    .flex-box {
+        flex-direction: column;
+        text-align: center;
+        /* gap: 6rem; */
+    }
     .offers-section h2 {
         font-size: 20px;
         line-height: 28px;
     }
 
-    .flex-box-two-column input[type="email"] {
-        width: 100%;
-        max-width: 250px;
-        padding: 0.6rem 1rem;
-    }
-
     .subscribe {
-        padding: 0.6rem 0;
+        padding: 0.6rem 1rem;
         width: 100%;
-        max-width: 250px;
-        font-size: 0.9rem;
     }
 
-    .fa-envelope {
-        font-size: 1.3rem;
-        top: 35px;
-        right: 15px;
+    .fa-envelope{
+        top: 70%;
+        left: -55%;
     }
+
 }

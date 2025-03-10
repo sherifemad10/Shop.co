@@ -119,10 +119,12 @@
     }
     
     .hero .shape-star-2 {
-      right: 30%;
+      top: 40%;
+      right: 18%;
     }
     #brand {
-      padding: 2rem;
+      padding: 2rem 6rem;
+
     }
     
     .brand .item-brand {
@@ -150,30 +152,47 @@
     }
   
     .items {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 30px;
         margin-top: 60px;
+        margin-bottom:300px;
+    }
+        
+    .item-center-1 {
+      position: absolute;
+      top: 52%;
+      right: 60%;
+    }
+    .item-center-2 {
+      position: absolute;
+      top: 52%;
+      right: 20%;
+    }
+    .item-center-3 {
+      position: absolute;
+      top: 65%;
+      right: 40%;
     }
   
     .cta-button {
         width: 100%;
-        max-width: 300px;
+        max-width: 600px;
     }
   
     .hero .shape-star-1,
     .hero .shape-star-2 {
-      width: 20px;
-      opacity: 0.7;
+      width: 100px;
     }
   
     .hero .shape-star-1 {
-      top: 15%;
-      right: 5%;
+      top: 80%;
+      right: 20%;
     }
   
     .hero .shape-star-2 {
-      top: 50%;
-      right: 20%;
+      top: 90%;
+      right: 60%;
       transform: translateY(-50%);
     }
   
@@ -182,13 +201,13 @@
     }
     
     #brand {
-      gap: 1.5rem;
+      /* gap: 1.5rem; */
       justify-content: center;
     }
     
     .brand .item-brand {
-      flex: 1 1 100px;
-      max-width: 130px;
+      flex: 1 1 200px;
+      max-width: 200px;
     }
   
   }
@@ -204,6 +223,10 @@
     .nav-links {
         display: none;
     }
+    .cta-button {
+      width: 100%;
+      max-width: 800px;
+  }
   
     .brand {
       padding: 2rem 0.5rem;
@@ -215,11 +238,46 @@
     }
     
     .brand .item-brand {
-      flex: 1 1 80px;
-      max-width: 100px;
+      flex: 1 1 150px;
+      max-width: 200px;
     }
     
     .item-brand img {
       padding: 0.3rem;
+    }
+
+    .item-center-1 {
+      position: absolute;
+      top: 50%;
+      right: 60%;
+    }
+    .item-center-2 {
+      position: absolute;
+      top: 50%;
+      right: 5%;
+    }
+
+    .item-center-3 {
+      position: absolute;
+      top: 65%;
+      right: 30%;
+    }
+
+    
+
+    .hero .shape-star-1,
+    .hero .shape-star-2 {
+      width: 100px;
+    }
+  
+    .hero .shape-star-1 {
+      top: 80%;
+      right: 10%;
+    }
+  
+    .hero .shape-star-2 {
+      top: 90%;
+      right: 60%;
+      transform: translateY(-50%);
     }
   }
