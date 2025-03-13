@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   function reviewCard() {
-    fetch("./data/review.json")
+    fetch("../data/review.json")
       .then((response) => response.json())
       .then((data) => {
         slider.innerHTML = data

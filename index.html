@@ -1,127 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop.co</title>
-    <!-- css -->
-    <link rel="stylesheet" href="./Css/globle.css" />
-    <link rel="stylesheet" href="./Css/alertForSignUp.css" />
-    <link rel="stylesheet" href="./Css/hero.css" />
-    <link rel="stylesheet" href="./Css/Prodects.css" />
-    <link rel="stylesheet" href="./Css/review.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop.co</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./Css/globle.css" />
+  <!-- <link rel="stylesheet" href="./Css/styles.css" />  -->
+  <link rel="stylesheet" href="./Css/Prodects.css" /> 
+  <link rel="stylesheet" href="./Css/review.css" />
+  <link rel="stylesheet" href="Css/hero.css">
+  <link href="./output.css" rel="stylesheet">
 
-    <!-- font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <!-- Alert for sign up to get offer -->
+  <!-- Tailwind CSS -->
+  <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+  <!-- Font Awesome -->
+   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Custom styles for responsiveness and specific adjustments */
+    .search-bar {
+      background-color: #f1f1f1;
+      border-radius: 9999px; /* Fully rounded edges */
+    }
+    .burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    }
+    .shape-star {
+            position: absolute;
+            animation: float 6s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+    }
 
-    <div class="alertForSignUp">
-      <p>Sign up to get 20% off yto your first order.</p>
-      <a href="#">Sign Up Now</a>
+    .burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
 
-      <span class="close">&times;</span>
-    </div>
+  .burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
 
-    <!-- end Alert for sign up to get offer -->
+  .burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+  }
 
-    <!-- Navbar -->
-    <nav>
-      <div class="logo-burger">
-        <!-- mobile -->
-        <label class="burger" for="burger">
-          <input type="checkbox" id="burger" onchange="toggleNavbar()" />
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        <!-- end mobile -->
-        <div class="logo">
-          <a href="#">Shop.co</a>
-        </div>
+  .burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+
+  .burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  .burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+  }
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 1rem;
+      }
+      .search-bar {
+        width: 100%;
+        margin-top: 1rem;
+      }
+      .cart-sign-wrapper {
+        margin-left: auto;
+      }
+      .hero-heading {
+        font-size: 2.5rem;
+      }
+      .stats-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .brand-logos {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+  <!-- Alert for sign up to get offer -->
+  <div class="fixed w-full bg-black py-3 px-4 flex justify-center items-center gap-4 z-10 text-white top-0 left-0">
+    <p>Sign up to get 20% off your first order.</p>
+    <a class="text-white underline" href="#">Sign Up Now</a>
+    <span class="close cursor-pointer">×</span>
+  </div>
+  <!-- end Alert for sign up to get offer -->
+  <!-- Navbar -->
+  <nav class="fixed top-12 left-0 w-full shadow-md bg-white py-2 px-8 z-10 flex gap-24 items-center justify-between ">
+    <div class="logo-burger flex items-center justify-between gap-12">
+      <!-- mobile -->
+      <label class="burger md:hidden relative w-10 h-7 cursor-pointer hidden" for="burger">
+        <input type="checkbox" id="burger" class="hidden" onchange="toggleNavbar()" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <!-- end mobile -->
+      <div>
+        <a class="text-2xl font-bold" href="#">Shop.co</a>
       </div>
+    </div>
+    <ul class="menu hidden md:flex items-center text-2xl gap-8">
+      <li class="text-2xl">
+        <select class="text-2xl bg-transparent text-black cursor-pointer border-none outline-none">
+          <option class="text-black outline-none border-none" value="" hidden>Shop</option>
+          <option class="text-black outline-none border-none" value="Shirt">T-Shirt</option>
+          <option class="text-black outline-none border-none" value="Pants">Pants</option>
+          <option class="text-black outline-none border-none" value="Shoes">Shoes</option>
+        </select>
+      </li>
+      <li class="text-2xl"><a class="text-inherit" href="#">On Sale</a></li>
+      <li class="text-2xl"><a class="text-inherit" href="#">New Arrivals</a></li>
+      <li class="text-2xl"><a class="text-inherit" href="#">Brands</a></li>
+    </ul>
 
-      <ul class="menu" id="menu">
-        <li>
-          <select>
-            <option value="" hidden>Shop</option>
-            <option value="Shirt">T-Shirt</option>
-            <option value="Pants">Pants</option>
-            <option value="Shoes">Shoes</option>
-          </select>
-        </li>
-        <li><a href="#">On Sale</a></li>
-        <li><a href="#">New Arrivals</a></li>
-        <li><a href="#">Brands</a></li>
-      </ul>
-      <div class="search">
-        <form class="form">
-          <button>
-            <svg
-              width="17"
-              height="16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-labelledby="search"
-            >
-              <path
-                d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
-                stroke="currentColor"
-                stroke-width="1.333"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
+    <div class="cart-sign-wrapper flex items-center gap-4">
+      <div class="search flex items-center">
+
+        <form class="search-bar flex items-center mb-2 p-4">
+          <button class="text">
+            <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+              <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </button>
-          <input
-            class="input"
-            placeholder="Search for products..."
-            required=""
-            type="text"
-          />
-          <button class="reset" type="reset">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
+
+          <input class="input border-none outline-none bg-transparent" placeholder="Search for products..." required="" type="text" />
+          <button class="reset ml-2" type="reset">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </form>
-      </div>
-      <div class="cart-sign-warpper">
-        <!-- mobile -->
-        <button onclick="toggleSearch()">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <!-- end mobile -->
-        <div class="cart">
-          <i class="fas fa-shopping-cart"></i>
-          <span>0</span>
-        </div>
-        <div class="login">
-          <a href="#"><i class="fa-solid fa-circle-user"></i></a>
-        </div>
-      </div>
-    </nav>
-    <!-- end Navbar -->
 
+      </div>
+      <button class="md:hidden" onclick="toggleSearch()">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <div class="cart flex items-center">
+        <i class="fas fa-shopping-cart"></i>
+        <span absolute -top-2 -right-2 bg-primary text-white text-xs px-2 py-1 rounded-full>0</span>
+      </div>
+      <div class="login">
+        <a href="#" class="text-inherit fa-solid fa-circle-user"><i></i></a>
+      </div>
+    </div>
+  </nav>
+  <!-- end Navbar -->
+  <!-- Main Section -->
     <!-- hero section -->
 
     <section class="hero">
@@ -167,95 +224,60 @@
       </div>
     </section>
 
-    <section class="brand" id="brand">
-      <div class="item-brand">
-        <img
-          src="Images/versace-seeklogo.png"
-          width="200px"
-          alt="versace-brand"
-          loading="lazy"
-        />
+  <!-- Brand Logos Section -->
+  <section class="py-9 bg-black">
+    <div class="container mx-auto max-w-7xl flex justify-center gap-70">
+        <img src="Images/versace-seeklogo.png" class="h-8 filter brightness-0 invert" />
+        <img src="Images/zara-seeklogo.png" class="h-8 filter brightness-0 invert" />
+        <img src="Images/gucci-seeklogo.png" class="h-8 filter brightness-0 invert" />
+        <img src="Images/prada-seeklogo.png" class="h-8 filter brightness-0 invert" />
+        <img src="Images/calvin-klein-seeklogo.png" class="h-8 filter brightness-0 invert" />
+    </div>
+  </section>
+  <!-- NEW ARRIVALS -->
+  <section class="new-arrivals">
+    <div class="new-arrivals-title">
+      <h2>New Arrivals</h2>
+    </div>
+
+    <div class="new-arrivals-contant"></div>
+    <button class="seeMore-btn">View All</button>
+  </section>
+  <!-- end NEW ARRIVALS -->
+
+  <hr />
+  <!-- top selling -->
+
+  <section class="new-arrivals">
+    <div class="new-arrivals-title">
+      <h2>top selling</h2>
+    </div>
+
+    <div class="topSelling-contant"></div>
+    <button class="seeMore-btn">View All</button>
+  </section>
+  <!-- end TOP SELLING -->
+  <!-- Review Section -->
+  <section class="testimonial w-5/6 p-6 mx-auto">
+    <div class="flex justify-between items-center mb-7 p-2.5">
+      <h2 class="text-5xl font-bold text-4xl font-extrabold uppercase text-black -tracking-widest">
+        Our Happy Customers
+      </h2>
+      <div class="flex gap-2.5">
+        <button class="w-8 h-8 bg-transparent cursor-pointer flex items-center justify-center text-neutral-600 prev-btn" aria-label="Previous testimonial">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="w-8 h-8 bg-transparent cursor-pointer flex items-center justify-center text-neutral-600 next-btn" aria-label="Next testimonial">
+          <i class="fas fa-arrow-right"></i>
+        </button>
       </div>
-      <div class="item-brand">
-        <img src="Images/zara-seeklogo.png" width="100px" alt="zara-brand" loading="lazy"
-        />
-      </div>
-      <div class="item-brand">
-        <img src="Images/gucci-seeklogo.png" width="200px" alt="gucci-brand"
-        loading="lazy"
-        />
-      </div>
-      <div class="item-brand">
-        <img src="Images/prada-seeklogo.png" width="175px" alt="prada-brand" 
-        loading="lazy"
-        />
-      </div>
-      <div class="item-brand">
-        <img
-          src="Images/calvin-klein-seeklogo.png"
-          width="200px"
-          alt="calvin-klein-brand"
-          loading="lazy"
-        />
-      </div>
+    </div>
+    <section class="flex overflow-x-hidden scroll-smooth gap-5 p-4 w-full" id="testimonialSlider">
     </section>
-    <!-- end hero section -->
-
-    <!-- NEW ARRIVALS -->
-
-    <section class="new-arrivals">
-      <div class="new-arrivals-title">
-        <h2>New Arrivals</h2>
-      </div>
-
-      <div class="new-arrivals-contant"></div>
-      <button class="seeMore-btn">View All</button>
-    </section>
-    <!-- end NEW ARRIVALS -->
-
-    <hr />
-    <!-- top selling -->
-
-    <section class="new-arrivals">
-      <div class="new-arrivals-title">
-        <h2>top selling</h2>
-      </div>
-
-      <div class="topSelling-contant"></div>
-      <button class="seeMore-btn">View All</button>
-    </section>
-    <!-- end top selling -->
-
-    
-    <!-- review -->
-
-    <section class="testimonial-container">
-      <div class="testimonial-header">
-        <h2 class="testimonial-title">Our Happy Customers</h2>
-        <div class="testimonial-nav">
-          <button class="nav-btn prev-btn" aria-label="Previous testimonial">
-            <i class="fas fa-arrow-left"></i>
-          </button>
-          <button class="nav-btn next-btn" aria-label="Next testimonial">
-            <i class="fas fa-arrow-right"></i>
-          </button>
-        </div>
-      </div>
-
-      <section class="testimonial-slider" id="testimonialSlider"></section>
-    </section>
-
-    <!-- end review -->
-
-
-
-
-
-
-
-    <script src="./Js/navbar.js"></script>
-    <script src="./Js/homeProdect.js"></script>
-    <script src="./Js/review.js"></script>
-
-  </body>
+  </section>
+  <!-- end Review -->
+  <script src="./Js/navbar.js"></script>
+  <script src="./Js/homeProdect.js"></script>
+  <script src="./Js/review.js"></script>
+</body>
 </html>
